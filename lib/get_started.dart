@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'role.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
@@ -71,7 +72,9 @@ class GetStartedScreen extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  // Aksi saat tombol diklik
+                  Navigator.push(context, 
+                  MaterialPageRoute(builder: (context)=> const RoleScreen()),
+                  );
                 },
                 child: const Center(
                   child: Text(
