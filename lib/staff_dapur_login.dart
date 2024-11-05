@@ -15,6 +15,15 @@ class _StaffDapurLoginScreenState extends State<StaffDapurLoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: const Color(0xFF192438),
+        leading: IconButton(
+          icon: const Icon(Icons.chevron_left, color: Colors.white),
+        onPressed: () {
+          Navigator.pop(context);
+        }),
+      ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -33,7 +42,7 @@ class _StaffDapurLoginScreenState extends State<StaffDapurLoginScreen> {
               // Logo Kopi
               Image.asset(
                 'assets/images/splashscreen1.png', // Ganti dengan path gambar logo
-                height: 120,
+                height: 170,
               ),
               const SizedBox(height: 20),
               // Teks Judul
@@ -67,7 +76,10 @@ class _StaffDapurLoginScreenState extends State<StaffDapurLoginScreen> {
                     filled: true,
                     fillColor: const Color(0xFF192438),
                     hintText: 'staffdapurlogin@gmail.com',
-                    hintStyle: const TextStyle(color: Colors.white70, fontFamily: 'Sora'),
+                    hintStyle: const TextStyle
+                    (color: Colors.white70,
+                    fontFamily: 'Sora',
+                    fontWeight: FontWeight.w400),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide.none,

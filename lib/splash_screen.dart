@@ -76,9 +76,9 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Image.asset(
                   'assets/images/splashscreen1.png', // ganti dengan path gambar asli
-                  height: 100,
+                  height: 170,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 10),
                 // Teks CoffeeShop
                 RichText(
                   text: const TextSpan(

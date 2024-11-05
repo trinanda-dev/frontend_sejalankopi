@@ -15,6 +15,15 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: const Color(0xFF192438),
+        leading: IconButton(
+          icon: const Icon(Icons.chevron_left, color: Colors.white),
+        onPressed: () {
+          Navigator.pop(context);
+        }),
+      ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -33,7 +42,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
               // Logo Kopi
               Image.asset(
                 'assets/images/splashscreen1.png', // Ganti dengan path gambar logo
-                height: 120,
+                height: 170,
               ),
               const SizedBox(height: 20),
               // Teks Judul
@@ -82,7 +91,10 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                 child: TextField(
                   controller: passwordController,
                   obscureText: true,
-                  style: const TextStyle(color: Colors.white, fontFamily: 'Sora'),
+                  style: const TextStyle(
+                    color: Colors.white, 
+                    fontFamily: 'Sora',
+                    fontWeight: FontWeight.w400),
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: const Color(0xFF192438),

@@ -62,9 +62,9 @@ class _RoleScreenState extends State<RoleScreen> {
               // Logo Kopi
               Image.asset(
                 'assets/images/splashscreen1.png', // Ganti dengan path gambar logo
-                height: 120,
+                height: 170,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               // Teks Judul
               RichText(
                 text: const TextSpan(
