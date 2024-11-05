@@ -21,8 +21,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-
+    - assets/images/splashscreen1.png
+    - assets/images/get_started.png
   fonts:
     - family: Sora
       fonts:
