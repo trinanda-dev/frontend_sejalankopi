@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'admin_login.dart'; // Import halaman AdminLoginScreen
+import 'kasir_login.dart'; // Import halaman KasirLoginScreen
+import 'staff_dapur_login.dart'; // Import halaman StaffDapurLoginScreen
+import 'home.dart'; // Import halaman HomeScreen untuk pelanggan
 
 class RoleScreen extends StatefulWidget {
   const RoleScreen({super.key});
@@ -11,6 +15,31 @@ class RoleScreen extends StatefulWidget {
 class _RoleScreenState extends State<RoleScreen> {
   // Variabel untuk menyimpan peran yang dipilih
   String selectedRole = 'Admin';
+
+  void navigateToRoleScreen() {
+    // Logika untuk mengarahkan ke halaman sesuai peran
+    if (selectedRole == 'Admin') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const AdminLoginScreen()),
+      );
+    } else if (selectedRole == 'Staff Dapur') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const StaffDapurLoginScreen()),
+      );
+    } else if (selectedRole == 'Kasir') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const KasirLoginScreen()),
+      );
+    } else if (selectedRole == 'Pelanggan') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -131,9 +160,7 @@ class _RoleScreenState extends State<RoleScreen> {
                     shadowColor: const Color(0xFF8C4D21),
                     elevation: 8,
                   ),
-                  onPressed: () {
-                    // Logika untuk tombol masuk
-                  },
+                  onPressed: navigateToRoleScreen, // Memanggil fungsi navigateToRoleScreen
                   child: const Center(
                     child: Text(
                       'Masuk',
